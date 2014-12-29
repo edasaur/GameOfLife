@@ -40,7 +40,6 @@ function addClick(x, y, dragging) {
 	clickY.push(y);
 	clickDrag.push(dragging);
 }
-
 function fillColor() {
 	var leftCornerX, leftCornerY;
 	for (var i = 0; i < clickX.length; i++) {
@@ -51,13 +50,19 @@ function fillColor() {
 			context.fillRect(leftCornerX, leftCornerY, 4, 4);
 		} else {
 			for (var j = 0; j < aliveX.length; j++) {
-				if (leftCornerX == aliveX[j] && leftCornerY == aliveY[j]) {
-					context.fillStyle = "black";
+				
+				if (i > 0) {
+					var prevLeftCornerX = clickX[i-1] - ((clickX[i-1]) % 5)+1;
+		                	var prevLeftCornerY = clickY[i-1] - ((clickY[i-1]-1) % 5);
+				}
+				noRepeat = i && prevLeftCornerX != leftCornerX && prevLeftCornerY != leftCornerY
+				if (leftCornerX == aliveX[j] && leftCornerY == aliveY[j] && noRepeat) {
+					context.fillStyle = "#00FF00";
 					context.fillRect(leftCornerX, leftCornerY, 4, 4);
 					j = aliveX.length;
 				} 
 				if (j == (aliveX.length - 1)) {
-					context.fillStyle = "green";
+					context.fillStyle = "#008000";
 					context.fillRect(leftCornerX, leftCornerY, 4, 4);
 				}
 			}
