@@ -1,9 +1,13 @@
+//Setting up grid
 var canvas = document.getElementById("map");
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+
 canvas.width = w;
 canvas.height = h;
+
 var context = canvas.getContext("2d");
+
 for (var x = 0.5; x < canvas.width; x += 5) {
 	context.moveTo(x,0);
 	context.lineTo(x,canvas.height);
@@ -17,14 +21,19 @@ context.lineWidth = 1;
 context.strokeStyle = "#696969";
 context.stroke();
 
+// Should add text to grid to indicate that spacebar toggles menu visibility
+
+
+
+//Allowing user to click on individual cells
 var clickX = new Array();
 var clickY = new Array();
 var clickDrag = new Array();
-//Naive method for now. Change to color-picking method later
+
+	//Naive method for now. Change to color-picking method later
 var aliveX = new Array();
 var aliveY = new Array();
 var fill;
-
 
 function addClick(x, y, dragging) {
 	clickX.push(x);
@@ -32,7 +41,7 @@ function addClick(x, y, dragging) {
 	clickDrag.push(dragging);
 }
 
-function redraw() {
+function fillColor() {
 	var leftCornerX, leftCornerY;
 	for (var i = 0; i < clickX.length; i++) {
 		leftCornerX = clickX[i] - ((clickX[i]) % 5)+1;
@@ -66,13 +75,13 @@ function redraw() {
 $('#map').mousedown(function(m){
 	fill = true;
 	addClick(m.pageX, m.pageY);
-	redraw();
+	fillColor();
 });
 
 $('#map').mousemove(function(m){
 	if (fill) {
 		addClick(m.pageX, m.pageY, true);
-		redraw();
+		fillColor();
 	}
 });
 
@@ -83,5 +92,10 @@ $('#map').mouseup(function(m) {
 $('#map').mouseleave(function(m) {
 	fill = false;
 });
+
+//Menu options should be here
+
+//Game functionality should be here
+
 
 
