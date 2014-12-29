@@ -13,14 +13,14 @@ for (var y = 0.5; y < canvas.height; y+=5) {
 	context.moveTo(0,y);
 	context.lineTo(canvas.width, y)
 }
-context.lineWidth = 0.5;
+context.lineWidth = 1;
 context.strokeStyle = "#696969";
 context.stroke();
 
 var clickX = new Array();
 var clickY = new Array();
 var clickDrag = new Array();
-var paint;
+var fill;
 
 function addClick(x, y, dragging) {
 	clickX.push(x);
@@ -30,20 +30,14 @@ function addClick(x, y, dragging) {
 
 function redraw() {
 	//context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-	context.strokeStyle = "green";
-	context.lineJoin = "round";
-	context.lineWidth = 5;
-	
+	context.fillStyle = "green";
+	var actualX, actualY;
 	for (var i = 0; i < clickX.length; i++) {
-		context.beginPath();
-		if(clickDrag[i] && i) {
-			context.moveTo(clickX[i-1], clickY[i-1]);
-		} else {
-			context.moveTo(clickX[i]-1, clickY[i]);
-		}
-	context.lineTo(clickX[i], clickY[i]);
-	context.closePath();
-	context.stroke();
+		actualX = clickX[i] - ((clickX[i]) % 5)+1;
+		actualY = clickY[i] - ((clickY[i]-1) % 5);
+		console.log(actualX, actualY);
+		context.fillRect(actualX, actualY, 4, 4);
+		//(0,1)1, 5(5,6)6, 10(10,11)11,15(15,16);	
 	}
 }
 
@@ -54,18 +48,18 @@ $('#map').mousedown(function(m){
 });
 
 $('#map').mousemove(function(m){
-	if (paint) {
-		addClick(e.pageX, e.pageY, true);
+	if (fill) {
+		addClick(m.pageX, m.pageY, true);
 		redraw();
 	}
 });
 
-$('#map').mouseup(function(e) {
-	paint = false;
+$('#map').mouseup(function(m) {
+	fill = false;
 });
 
-$('#map').mouseleave(function(e) {
-	paint = false;
+$('#map').mouseleave(function(m) {
+	fill = false;
 });
 
 
