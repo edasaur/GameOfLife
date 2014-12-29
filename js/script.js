@@ -20,7 +20,11 @@ context.stroke();
 var clickX = new Array();
 var clickY = new Array();
 var clickDrag = new Array();
+//Naive method for now. Change to color-picking method later
+var aliveX = new Array();
+var aliveY = new Array();
 var fill;
+
 
 function addClick(x, y, dragging) {
 	clickX.push(x);
@@ -29,16 +33,34 @@ function addClick(x, y, dragging) {
 }
 
 function redraw() {
-	//context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-	context.fillStyle = "green";
-	var actualX, actualY;
+	var leftCornerX, leftCornerY;
 	for (var i = 0; i < clickX.length; i++) {
-		actualX = clickX[i] - ((clickX[i]) % 5)+1;
-		actualY = clickY[i] - ((clickY[i]-1) % 5);
-		console.log(actualX, actualY);
-		context.fillRect(actualX, actualY, 4, 4);
-		//(0,1)1, 5(5,6)6, 10(10,11)11,15(15,16);	
+		leftCornerX = clickX[i] - ((clickX[i]) % 5)+1;
+		leftCornerY = clickY[i] - ((clickY[i]-1) % 5); //determines where to fill square
+		if (aliveX.length == 0) {
+			context.fillStyle = "#008000";
+			context.fillRect(leftCornerX, leftCornerY, 4, 4);
+		} else {
+			for (var j = 0; j < aliveX.length; j++) {
+				if (leftCornerX == aliveX[j] && leftCornerY == aliveY[j]) {
+					context.fillStyle = "black";
+					context.fillRect(leftCornerX, leftCornerY, 4, 4);
+					j = aliveX.length;
+				} 
+				if (j == (aliveX.length - 1)) {
+					context.fillStyle = "green";
+					context.fillRect(leftCornerX, leftCornerY, 4, 4);
+				}
+			}
+		}
+		if (context.fillStyle == "#008000") {
+			console.log("pushed to alive");
+			aliveX.push(leftCornerX);
+			aliveY.push(leftCornerY);
+		}
 	}
+	clickX = new Array();
+	clickY = new Array();
 }
 
 $('#map').mousedown(function(m){
