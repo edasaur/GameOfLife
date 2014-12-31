@@ -33,7 +33,7 @@ var clickDrag = new Array();
 	//Naive method for now. Change to color-picking method later
 var aliveX = new Array();
 var aliveY = new Array();
-var fill;
+var dragging;
 
 function addClick(x, y, dragging) {
 	clickX.push(x);
@@ -41,12 +41,13 @@ function addClick(x, y, dragging) {
 	clickDrag.push(dragging);
 }
 
-	//This may ahve to be entirely rewritten based on further thoghts
+	//This may have to be entirely rewritten based on further thoughts
 function fillColor() {
 	var leftCornerX, leftCornerY;
 	for (var i = 0; i < clickX.length; i++) {
-		leftCornerX = clickX[i] - ((clickX[i]) % 5)+1;
+		leftCornerX = clickX[i] - ((clickX[i]-1) % 5); //determines where to fill square
 		leftCornerY = clickY[i] - ((clickY[i]-1) % 5); //determines where to fill square
+		
 		if (aliveX.length == 0) {
 			context.fillStyle = "#008000";
 			context.fillRect(leftCornerX, leftCornerY, 4, 4);
@@ -74,24 +75,24 @@ function fillColor() {
 }
 
 $('#map').mousedown(function(m){
-	fill = true;
-	addClick(m.pageX, m.pageY);
+	dragging = true;
+	addClick(m.pageX, m.pageYi, false);
 	fillColor();
 });
 
 $('#map').mousemove(function(m){
-	if (fill) {
+	if (dragging) {
 		addClick(m.pageX, m.pageY, true);
 		fillColor();
 	}
 });
 
 $('#map').mouseup(function(m) {
-	fill = false;
+	dragging = false;
 });
 
 $('#map').mouseleave(function(m) {
-	fill = false;
+	dragging = false;
 });
 
 //Menu options should be here
