@@ -23,7 +23,11 @@ context.strokeStyle = "#696969";
 context.stroke();
 
 // Should add text to grid to indicate that spacebar toggles menu visibility
-
+$(window).keypress(function(e) {
+	if (e.keyCode == 0 || e.keyCode == 32) {
+		console.log('Space pressed');
+	}
+});
 
 
 //Allowing user to click on individual cells
