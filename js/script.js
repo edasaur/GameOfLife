@@ -7,7 +7,8 @@ canvas.width = w;
 canvas.height = h;
 
 var context = canvas.getContext("2d");
-
+context.fillStyle="#FFFFFF";
+context.fillRect(0,0,w,h);
 for (var x = 0.5; x < canvas.width; x += 5) {
 	context.moveTo(x,0);
 	context.lineTo(x,canvas.height);
@@ -26,64 +27,46 @@ context.stroke();
 
 
 //Allowing user to click on individual cells
-var clickX = new Array();
-var clickY = new Array();
-var clickDrag = new Array();
-
+var prevPixelX, prevPixelY;
 	//Naive method for now. Change to color-picking method later
-var aliveX = new Array();
-var aliveY = new Array();
 var dragging;
 
-function addClick(x, y, dragging) {
-	clickX.push(x);
-	clickY.push(y);
-	clickDrag.push(dragging);
-}
-
-	//This may have to be entirely rewritten based on further thoughts
-function fillColor() {
-	var leftCornerX, leftCornerY;
-	for (var i = 0; i < clickX.length; i++) {
-		leftCornerX = clickX[i] - ((clickX[i]-1) % 5); //determines where to fill square
-		leftCornerY = clickY[i] - ((clickY[i]-1) % 5); //determines where to fill square
-		
-		if (aliveX.length == 0) {
-			context.fillStyle = "#008000";
-			context.fillRect(leftCornerX, leftCornerY, 4, 4);
-		} else {
-			for (var j = 0; j < aliveX.length; j++) {
-				if (leftCornerX == aliveX[j] && leftCornerY == aliveY[j]) {
-					context.fillStyle = "#00FF00";
-					context.fillRect(leftCornerX, leftCornerY, 4, 4);
-					j = aliveX.length;
-				} 
-				if (j == (aliveX.length - 1)) {
-					context.fillStyle = "#008000";
-					context.fillRect(leftCornerX, leftCornerY, 4, 4);
-				}
-			}
-		}
-		if (context.fillStyle == "#008000") {
-			aliveX.push(leftCornerX);
-			aliveY.push(leftCornerY);
+function isSameColor(hex, data) {
+	for (var i = 0; i <= 2; i++) {
+		if (parseInt(hex[i*2]+hex[i*2+1], 16) != data[i]) {
+			return false;
 		}
 	}
-	clickX = new Array();
-	clickY = new Array();
-	clickDrag = new Array();
+	return true;
+}
+
+
+function fillColor(pixelX, pixelY, dragging) {
+	fillPixelX = pixelX - ((pixelX-1)%5);
+	fillPixelY = pixelY - ((pixelY-1)%5);
+	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
+	if (isSameColor('FFFFFF', pixel)) {
+		context.fillStyle='#008000';
+	}else if (isSameColor('008000',pixel)) {
+		context.fillStyle='#00FF00';
+	}else {
+		context.fillStyle='#FFFFFF';
+	}
+	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
+		context.fillRect(fillPixelX, fillPixelY, 4, 4);
+	}
+	prevPixelX = fillPixelX;
+	prevPixelY = fillPixelY;
 }
 
 $('#map').mousedown(function(m){
 	dragging = true;
-	addClick(m.pageX, m.pageYi, false);
-	fillColor();
+	fillColor(m.pageX, m.pageY, false);
 });
 
 $('#map').mousemove(function(m){
 	if (dragging) {
-		addClick(m.pageX, m.pageY, true);
-		fillColor();
+		fillColor(m.pageX, m.pageY, true);
 	}
 });
 
