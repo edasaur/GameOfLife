@@ -7,7 +7,7 @@ canvas.width = w;
 canvas.height = h;
 
 var context = canvas.getContext("2d");
-context.fillStyle="#008000";
+context.fillStyle="#FFFFFF";
 context.fillRect(0,0,w,h);
 for (var x = 0.5; x < canvas.width; x += 5) {
 	context.moveTo(x,0);
@@ -32,7 +32,6 @@ var prevPixelX, prevPixelY;
 var dragging;
 
 function isSameColor(hex, data) {
-	console.log(hex, data);
 	for (var i = 0; i <= 2; i++) {
 		if (parseInt(hex[i*2]+hex[i*2+1], 16) != data[i]) {
 			return false;
@@ -45,20 +44,16 @@ function isSameColor(hex, data) {
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
-
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
-	console.log(pixel);
 	if (isSameColor('FFFFFF', pixel)) {
-		context.fillColor='#008000';
+		context.fillStyle='#008000';
 	}else if (isSameColor('008000',pixel)) {
-		context.fillColor='#00FF00';
+		context.fillStyle='#00FF00';
 	}else {
-		context.fillColor='#FFFFFF';
+		context.fillStyle='#FFFFFF';
 	}
 	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
-		context.clearRect(fillPixelX, fillPixelY, 4, 4);
 		context.fillRect(fillPixelX, fillPixelY, 4, 4);
-		console.log("What");
 	}
 	prevPixelX = fillPixelX;
 	prevPixelY = fillPixelY;
