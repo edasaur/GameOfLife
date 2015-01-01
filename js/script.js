@@ -25,7 +25,7 @@ context.stroke();
 // Should add text to grid to indicate that spacebar toggles menu visibility
 $(window).keypress(function(e) {
 	if (e.keyCode == 0 || e.keyCode == 32) {
-		console.log('Space pressed');
+		console.log('Menu item should pop up');
 	}
 });
 
@@ -34,6 +34,16 @@ $(window).keypress(function(e) {
 var prevPixelX, prevPixelY;
 	//Naive method for now. Change to color-picking method later
 var dragging;
+var stateGrid = new Array();
+var temp = new Array();
+var wSquares = ((w - ((w-1)%5)-1)/5)+1; //calculates number of squares in x
+var hSquares = ((h - ((h-1)%5)-1)/5)+1; //calculates number of squares in y
+for (var count=0; count < hSquares; count++) {
+	temp.push(0);
+}
+for (var count=0; count < wSquares; count++) {
+	stateGrid.push(temp);
+}
 
 function isSameColor(hex, data) {
 	for (var i = 0; i <= 2; i++) {
@@ -43,11 +53,14 @@ function isSameColor(hex, data) {
 	}
 	return true;
 }
-
+var empty = 0;
+var alive = 1;
+var dead = 2;
 
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
+	console.log(fillPixelX, fillPixelY);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
 	if (isSameColor('FFFFFF', pixel)) {
 		context.fillStyle='#008000';
@@ -57,6 +70,13 @@ function fillColor(pixelX, pixelY, dragging) {
 		context.fillStyle='#FFFFFF';
 	}
 	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
+		if (context.fillStyle=="#ffffff") {
+			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = empty;			
+		} else if (context.fillStyle=="#008000") {
+			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = alive;
+		} else {
+			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = dead;
+		}
 		context.fillRect(fillPixelX, fillPixelY, 4, 4);
 	}
 	prevPixelX = fillPixelX;
