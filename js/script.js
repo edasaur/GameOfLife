@@ -63,7 +63,9 @@ function isSameColor(hex, data) {
 }
 var empty = 0;
 var alive = 1;
-var dead = 2;
+var dead = 0;
+var aliveColor = "#008000";
+var deadColor = "#00FF00";
 
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
@@ -71,14 +73,14 @@ function fillColor(pixelX, pixelY, dragging) {
 	console.log(fillPixelX, fillPixelY);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
 	if (isSameColor('FFFFFF', pixel)) {
-		context.fillStyle='#008000';
+		context.fillStyle=aliveColor;
 	}else if (isSameColor('008000',pixel)) {
-		context.fillStyle='#00FF00';
+		context.fillStyle=deadColor;
 	}else {
-		context.fillStyle='#008000';
+		context.fillStyle=aliveColor;
 	}
 	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
-		if (context.fillStyle=="#008000") {
+		if (context.fillStyle==aliveColor) {
 			console.log("poke");
 			console.log((fillPixelX-1)/5, (fillPixelY-1)/5);		
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = alive;

@@ -32,9 +32,9 @@ function countNeighbors(x, y) {
 	}
 }
 
-
+var updated;
 function update() {
-	var updated = new Array();
+	updated = new Array();
 	for (var i = 0; i < template.length; i++) {
         	updated[i] = template[i].slice();
 	}
@@ -44,15 +44,19 @@ function update() {
 			if (stateGrid[i][j] == alive) {
 				if (neighborCount < 2 || neighborCount > 3) {
 					updated[i][j] = dead;
-					context.fillStyle = "#00FF00"
+					context.fillStyle = deadColor
 					context.fillRect(i*5+1, j*5+1, 4, 4);
 					
-				} 
+				} else {
+					updated[i][j] = alive;
+				}
 			} else {
 				if (neighborCount == 3) {
 					updated[i][j] = alive;
-					context.fillStyle = "#008000"
+					context.fillStyle = aliveColor;
 					context.fillRect(i*5+1, j*5+1, 4, 4);
+				} else {
+					updated[i][j] = dead;
 				}
 			}
 		}
