@@ -37,13 +37,13 @@ var dragging;
 
 
 var template = new Array();
-var temp = new Array();
 var wSquares = ((w - ((w-1)%5)-1)/5)+1; //calculates number of squares in x
 var hSquares = ((h - ((h-1)%5)-1)/5)+1; //calculates number of squares in y
-for (var count=0; count < hSquares; count++) {
-	temp.push(0);
-}
-for (var count=0; count < wSquares; count++) {
+for (var wcount=0; wcount < wSquares; wcount++) {
+	var temp = new Array();
+	for (var hcount=0; hcount < hSquares; hcount++) {
+		temp.push(0);
+	}
 	template.push(temp);
 }
 
@@ -66,7 +66,7 @@ var dead = 2;
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
-	//console.log(fillPixelX, fillPixelY);
+	console.log(fillPixelX, fillPixelY);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
 	if (isSameColor('FFFFFF', pixel)) {
 		context.fillStyle='#008000';
@@ -79,6 +79,8 @@ function fillColor(pixelX, pixelY, dragging) {
 		if (context.fillStyle=="#ffffff") {
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = empty;			
 		} else if (context.fillStyle=="#008000") {
+			console.log("poke");
+			console.log((fillPixelX-1)/5, (fillPixelY-1)/5);		
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = alive;
 		} else {
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = dead;
