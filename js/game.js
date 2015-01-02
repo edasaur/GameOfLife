@@ -34,7 +34,10 @@ function countNeighbors(x, y) {
 
 
 function update() {
-	var updated = template;
+	var updated = new Array();
+	for (var i = 0; i < template.length; i++) {
+        	updated[i] = template[i].slice();
+	}
 	for (var i = 0; i < stateGrid.length; i++) {
 		for (var j = 0; j < stateGrid[0].length; j++) {
 			var neighborCount = countNeighbors(i, j);
@@ -43,6 +46,7 @@ function update() {
 					updated[i][j] = dead;
 					context.fillStyle = "#00FF00"
 					context.fillRect(i*5+1, j*5+1, 4, 4);
+					
 				} 
 			} else {
 				if (neighborCount == 3) {
@@ -53,6 +57,10 @@ function update() {
 			}
 		}
 	}
+	for (var i = 0; i < template.length; i++) {
+        	stateGrid[i] = updated[i].slice();
+	}
 }
+
 
 

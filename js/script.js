@@ -47,9 +47,11 @@ for (var wcount=0; wcount < wSquares; wcount++) {
 	template.push(temp);
 }
 
+var stateGrid = new Array();
 
-var stateGrid = template;
-
+for (var i = 0; i < template.length; i++) {
+	stateGrid[i] = template[i].slice();
+}
 
 function isSameColor(hex, data) {
 	for (var i = 0; i <= 2; i++) {
@@ -76,9 +78,7 @@ function fillColor(pixelX, pixelY, dragging) {
 		context.fillStyle='#008000';
 	}
 	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
-		if (context.fillStyle=="#ffffff") {
-			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = empty;			
-		} else if (context.fillStyle=="#008000") {
+		if (context.fillStyle=="#008000") {
 			console.log("poke");
 			console.log((fillPixelX-1)/5, (fillPixelY-1)/5);		
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = alive;
