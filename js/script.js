@@ -34,7 +34,9 @@ $(window).keypress(function(e) {
 var prevPixelX, prevPixelY;
 	//Naive method for now. Change to color-picking method later
 var dragging;
-var stateGrid = new Array();
+
+
+var template = new Array();
 var temp = new Array();
 var wSquares = ((w - ((w-1)%5)-1)/5)+1; //calculates number of squares in x
 var hSquares = ((h - ((h-1)%5)-1)/5)+1; //calculates number of squares in y
@@ -42,8 +44,12 @@ for (var count=0; count < hSquares; count++) {
 	temp.push(0);
 }
 for (var count=0; count < wSquares; count++) {
-	stateGrid.push(temp);
+	template.push(temp);
 }
+
+
+var stateGrid = template;
+
 
 function isSameColor(hex, data) {
 	for (var i = 0; i <= 2; i++) {
@@ -60,14 +66,14 @@ var dead = 2;
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
-	console.log(fillPixelX, fillPixelY);
+	//console.log(fillPixelX, fillPixelY);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
 	if (isSameColor('FFFFFF', pixel)) {
 		context.fillStyle='#008000';
 	}else if (isSameColor('008000',pixel)) {
 		context.fillStyle='#00FF00';
 	}else {
-		context.fillStyle='#FFFFFF';
+		context.fillStyle='#008000';
 	}
 	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
 		if (context.fillStyle=="#ffffff") {
