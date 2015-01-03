@@ -8,19 +8,20 @@ $(window).keypress(function(e) {
 });
 
 function upperLeft(x, y) {
-	return stateGrid[(((x-1) >= 0) && (x-1)) || (((x-1) < 0) && (wSquares-1))][(((y-1) >= 0) && (y-1)) || (((y-1) < 0) && (hSquares-1))];
+	var temp = stateGrid[((((x-1) >= 0) && (x-1)) || (((x-1) < 0) && (wSquares-1))) + 0];
+	return temp[((((y-1) >= 0) && (y-1)) || (((y-1) < 0) && (hSquares-1)))+0];
 }
 
 function upper(x, y) {
-	return stateGrid[x][(((y-1) >= 0) && (y-1)) || (((y-1) < 0) && (hSquares-1))];
+	return stateGrid[x][((((y-1) >= 0) && (y-1)) || (((y-1) < 0) && (hSquares-1)))+0];
 }
 
 function upperRight(x, y) {
-	return stateGrid[(x+1)%wSquares][(((y-1) >= 0) && (y-1)) || (((y-1) < 0) && (hSquares-1))];
+	return stateGrid[(x+1)%wSquares][((((y-1) >= 0) && (y-1)) || (((y-1) < 0) && (hSquares-1)))+0];
 }
 
 function middleLeft(x, y) {
-	return stateGrid[(((x-1) >= 0) && (x-1)) || (((x-1) < 0) && (wSquares-1))][y];
+	return stateGrid[((((x-1) >= 0) && (x-1)) || (((x-1) < 0) && (wSquares-1)))+0][y];
 }
 
 function middleRight(x, y) {
@@ -28,7 +29,7 @@ function middleRight(x, y) {
 }
 
 function bottomLeft(x, y) {
-	return stateGrid[(((x-1) >= 0) && (x-1)) || (((x-1) < 0) && (wSquares-1))][(y+1)%hSquares];
+	return stateGrid[((((x-1) >= 0) && (x-1)) || (((x-1) < 0) && (wSquares-1)))+0][(y+1)%hSquares];
 }
 
 function bottom(x, y) {
@@ -41,7 +42,10 @@ function bottomRight(x, y) {
 
 //naive solution. Will update later
 function countNeighbors(x, y) {
-	return parseInt(upperLeft(x, y)) + upper(x, y) + upperRight(x, y) + middleLeft(x, y) + middleRight(x, y) + bottomLeft(x, y) + bottom(x, y) + bottomRight(x, y);
+	var upper = upperLeft(x, y) + upper(x, y) + upperRight(x, y);
+	var middle = middleLeft(x, y) + middleRight(x, y);
+	var bottom = bottomLeft(x, y) + bottom(x, y) + bottomRight(x, y);
+	return upper+middle+bottom;
 }
 
 var updated;
