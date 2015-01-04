@@ -1,5 +1,6 @@
 //File for game rules
-
+                                                                                                                   
+var counter = document.getElementById("genCount");
 $(window).keypress(function(e) {
 	if (e.keyCode == 0 || e.keyCode == 32) {
 		console.log('Game Start!');
@@ -79,6 +80,7 @@ function update() {
 	for (var i = 0; i < template.length; i++) {
         	stateGrid[i] = updated[i].slice();
 	}
+	counter.innerHTML = parseInt(counter.innerHTML)+1;
 }
 
 
