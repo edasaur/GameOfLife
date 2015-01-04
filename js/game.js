@@ -53,8 +53,8 @@ function update() {
 	for (var i = 0; i < template.length; i++) {
         	updated[i] = template[i].slice();
 	}
-	for (var i = 0; i < stateGrid.length; i++) {
-		for (var j = 0; j < stateGrid[0].length; j++) {
+	for (var i = 0; i < wSquares; i++) {
+		for (var j = 0; j < hSquares; j++) {
 			var neighborCount = countNeighbors(i, j);
 			if (stateGrid[i][j] == alive) {
 				if (neighborCount < 2 || neighborCount > 3) {
