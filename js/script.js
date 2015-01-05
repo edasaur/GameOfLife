@@ -70,7 +70,6 @@ var deadColor = "#00FF00";
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
-	console.log(fillPixelX, fillPixelY);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
 	if (isSameColor('FFFFFF', pixel)) {
 		context.fillStyle=aliveColor;
@@ -81,8 +80,6 @@ function fillColor(pixelX, pixelY, dragging) {
 	}
 	if (!dragging || !(prevPixelX==fillPixelX && prevPixelY==fillPixelY)) {
 		if (context.fillStyle==aliveColor) {
-			console.log("poke");
-			console.log((fillPixelX-1)/5, (fillPixelY-1)/5);		
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = alive;
 		} else {
 			stateGrid[(fillPixelX-1)/5][(fillPixelY-1)/5] = dead;
@@ -112,6 +109,13 @@ $('#map').mouseleave(function(m) {
 	dragging = false;
 });
 
+$('#genCount').mouseover(function(m) {
+	counter.style.opacity = 0.4;
+});
+
+$('#genCount').mouseleave(function(m) {
+	counter.style.opacity = 1;
+});
 //Menu options should be here
 
 //Game functionality should be here

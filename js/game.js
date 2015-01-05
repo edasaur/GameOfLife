@@ -83,5 +83,3 @@ function update() {
 	counter.innerHTML = parseInt(counter.innerHTML)+1;
 }
 
-
-
