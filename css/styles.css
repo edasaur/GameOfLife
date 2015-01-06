@@ -19,11 +19,57 @@
 
 
 #color-selection {
+	position: relative;
 	margin-right: auto;
 	margin-left: auto;
 	width: 150px;
 	height: 25px;
 	border: 1px black solid; 
+}
+
+#selector {
+	position: absolute;
+	width: 25px;	
+	height: 25px;
+}
+
+#selector-up {
+	position: absolute;
+	background: black;
+	top: 0px;
+	left: 5px;
+	width: 15px;
+	height: 5px;
+	z-index: 3;
+}
+
+#selector-down {
+	position: absolute;
+	background: black;
+	bottom: 0px;
+	left: 5px;
+	width: 15px;
+	height: 5px;
+	z-index: 3;
+}
+
+
+#selector-right {
+	position: absolute;
+	background: black;
+	left: 0px;
+	width: 5px;
+	height: 25px;
+	z-index: 3;
+}
+
+#selector-left {
+	position: absolute;
+	background: black;
+	right: 0px;
+	width: 5px;
+	height: 25px;
+	z-index: 3;
 }
 
 .color {
