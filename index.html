@@ -8,18 +8,17 @@
 <canvas id="map"></canvas>
 <div id="menu">
 	<h1>MENU</h1>
-	<form>
-		<input type="radio" name="speed">1x
-		<input type="radio" name="speed">2x
-		<input type="radio" name="speed">4x
-		<br>
-		<input type="radio" name="color">Red
-		<input type="radio" name="color">Green
-		<input type="radio" name="color">Blue
-		<input type="radio" name="color">Yellow
-		<input type="radio" name="color">Cyan
-		<input type="radio" name="color">Magenta
-	</form>	
+	<div id="speed-selection">
+	</div>
+	<div id="color-selection">
+		<div id="selector"></div>
+		<div class="color" id="green"></div>
+		<div class="color" id="blue"></div>
+		<div class="color" id="red"></div>
+		<div class="color" id="cyan"></div>
+		<div class="color" id="magenta"></div>
+		<div class="color" id="yellow"></div>
+	</div>
 </div>
 <div id="genCount">1</div>
 <script type="text/javascript" src="js/jquery.js"></script>
