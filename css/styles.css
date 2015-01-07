@@ -18,6 +18,76 @@
 	width: 300px;
 }
 
+#speed-selection {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: 200px;
+	height: 150px;
+}
+
+.row {
+	position: relative;
+	height: 50px;
+}
+
+.checked {
+	position: absolute;
+	z-index: 6;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 16px;
+	height: 16px;
+	background: red;
+}
+
+#checked1 {
+	visibility: hidden;
+}
+
+#checked2 {
+        visibility: hidden;
+}
+
+#checked3 {
+        visibility: hidden;
+}
+
+.checkbox {
+	width: 25px;
+	height: 25px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: white;
+	z-index: 5;
+	position: absolute;
+}
+
+.col1 {
+	height: 50px;
+	width: 100px;	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.col2 {
+	height: 50px;
+	width: 100px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 25px;	
+	line-height: 50px;
+	color: white;
+}
+
 #color-selection {
 	position: relative;
 	margin-right: auto;
