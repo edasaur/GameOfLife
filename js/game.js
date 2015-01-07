@@ -1,10 +1,18 @@
 //File for game rules
-                                                                                                                   
-var counter = document.getElementById("genCount");
+                                                                                                          var counter = document.getElementById("genCount");
 $(window).keypress(function(e) {
 	if (e.keyCode == 0 || e.keyCode == 32) {
 		console.log('Game Start!');
-		update();
+		if (checkbox1.getAttribute("checked") == "true") {
+			var repeat = 1;
+		} else if (checkbox2.getAttribute("checked") == "true") {
+			var repeat = 3;
+		} else {
+			var repeat = 5;
+		}
+		for (var i = 0; i < repeat; i++) {
+			update();
+		}
 	}
 });
 
