@@ -8,29 +8,29 @@
 }
 
 #menu {
-	background: white;
+	background: #0047AB;
 	/*opacity: 0.5;*/
 	position: absolute;
-	right: 0;
+	top: 0px;
+	right: 0px;
 	z-index: 2;
 	height: 100%;
-	width: 30%;
+	width: 300px;
 }
-
 
 #color-selection {
 	position: relative;
 	margin-right: auto;
 	margin-left: auto;
-	width: 150px;
-	height: 25px;
+	width: 240px;
+	height: 10px;
 	border: 1px black solid; 
 }
 
 #selector {
 	position: absolute;
-	width: 25px;	
-	height: 25px;
+	width: 10px;	
+	height: 10px;
 }
 
 #triangle-up {
@@ -50,75 +50,150 @@
 #selector-up {
 	position: absolute;
 	background: white;
-	top: 0px;
-	left: 5px;
-	width: 15px;
-	height: 5px;
+	top: -1px;
+	left: 1px;
+	width: 8px;
+	height: 2px;
 	z-index: 3;
 }
 
 #selector-down {
 	position: absolute;
 	background: white;
-	bottom: 0px;
-	left: 5px;
-	width: 15px;
-	height: 5px;
+	bottom: -1px;
+	left: 1px;
+	width: 8px;
+	height: 2px;
 	z-index: 3;
 }
 
-
-#selector-right {
-	position: absolute;
-	background: white;
-	left: 0px;
-	width: 5px;
-	height: 25px;
-	z-index: 3;
-}
 
 #selector-left {
 	position: absolute;
 	background: white;
-	right: 0px;
-	width: 5px;
-	height: 25px;
+	left: -1px;
+	top: -1px;
+	width: 2px;
+	height: 12px;
+	z-index: 3;
+}
+
+#selector-right {
+	position: absolute;
+	background: white;
+	right: -1px;
+	top: -1px;
+	width: 2px;
+	height: 12px;
 	z-index: 3;
 }
 
 .color {
 	float: left;
-	height: 25px;
-	width: 25px;
+	height: 10px;
+	width: 10px;
 }
 
-#green {
-	background-color: #00FF00;
+#color1 {
+	background-color: #FF00FE;
 }
 
-#blue {
-	background-color: #0000FF;
+#color2 {
+	background-color: #FE00BF;
 }
 
-#red {
-	background-color: #FF0000;
+#color3 {
+	background-color: #FD007F;
 }
 
-#cyan {
-	background-color: #00FFFF;
+#color4 {
+	background-color: #FF003D;
 }
 
-#yellow {
-	background-color: #FFFF00;
+#color5 {
+	background-color: #FE0000;
 }
 
-#magenta {
-	background-color: #FF00FF;
+#color6 {
+	background-color: #FE3E00;
+}
+
+#color7 {
+	background-color: #F87D02;
+}
+
+#color8 {
+	background-color: #FDBE07;
+}
+
+#color9 {
+	background-color: #FCFE02;
+}
+
+#color10 {
+	background-color: #BBFE01;
+}
+
+#color11 {
+	background-color: #81FE00;
+}
+
+#color12 {
+	background-color: #3FFF01;
+}
+
+#color13 {
+	background-color: #01FE00;
+}
+
+#color14 {
+	background-color: #00FD3E;
+}
+
+#color15 {
+	background-color: #00FE80;
+}
+
+#color16 {
+	background-color: #00FEBD;
+}
+
+#color17 {
+	background-color: #00FEFE;
+}
+
+#color18 {
+	background-color: #00BFFE;
+}
+
+#color19 {
+	background-color: #007EFF;
+}
+
+#color20 {
+	background-color: #0040FC;
+}
+
+#color21 {
+	background-color: #0000FB;
+}
+
+#color22 {
+	background-color: #3D00FE;
+}
+
+#color23 {
+	background-color: #7E00FF;
+}
+
+#color24 {
+	background-color: #C000FD;
 }
 
 h1 {
 	text-align: center;
 	font-family: sans-serif;
+	color: white;
 }
 
 #genCount {
