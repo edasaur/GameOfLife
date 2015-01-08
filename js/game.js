@@ -1,7 +1,9 @@
 //File for game rules
-                                                                                                          var counter = document.getElementById("genCount");
+var counter = document.getElementById("genCount");
+var menu = document.getElementById("menu");
+menu.style.visibility="visible";
 $(window).keypress(function(e) {
-	if (e.keyCode == 0 || e.keyCode == 32) {
+	if (e.keyCode == 32) {
 		console.log('Game Start!');
 		if (checkbox1.getAttribute("checked") == "true") {
 			var repeat = 1;
@@ -12,6 +14,24 @@ $(window).keypress(function(e) {
 		}
 		for (var i = 0; i < repeat; i++) {
 			update();
+		}
+	}
+
+	if (e.keyCode == 13) {
+		if (menu.style.visibility == "visible") {
+			checkbox1.style.visibility="hidden";
+			checkbox2.style.visibility="hidden";
+			checkbox3.style.visibility="hidden";
+			menu.style.visibility="hidden";
+		} else {
+			menu.style.visibility="visible";
+			if (checkbox1.getAttribute('checked') == "true") {
+				checkbox1.style.visibility="visible";
+			} else if (checkbox2.getAttribute('checked') == "true") {
+				checkbox2.style.visibility="visible";
+			} else {
+				checkbox3.style.visibility="visible";
+			}
 		}
 	}
 });
