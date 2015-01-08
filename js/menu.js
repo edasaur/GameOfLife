@@ -131,11 +131,536 @@ $('#checkbox3').mouseenter(function(m) {
 	}
 });
 
-var rgb = $(color1).css('background-color');
-rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 
 function halfColor(hex) {
 	
 }
 
+var baseString = "#color"
+$(baseString+1).click(function(m) {
+	var rgb = $(baseString+1).css('background-color');
+	console.log(baseString+1);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "0px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
 
+$(baseString+2).click(function(m) {
+	var rgb = $(baseString+2).css('background-color');
+	console.log(baseString+2);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "10px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+3).click(function(m) {
+	var rgb = $(baseString+3).css('background-color');
+	console.log(baseString+3);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "20px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+4).click(function(m) {
+	var rgb = $(baseString+4).css('background-color');
+	console.log(baseString+4);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "30px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+5).click(function(m) {
+	var rgb = $(baseString+5).css('background-color');
+	console.log(baseString+5);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "40px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+6).click(function(m) {
+	var rgb = $(baseString+6).css('background-color');
+	console.log(baseString+6);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "50px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+7).click(function(m) {
+	var rgb = $(baseString+7).css('background-color');
+	console.log(baseString+7);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "60px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+8).click(function(m) {
+	var rgb = $(baseString+8).css('background-color');
+	console.log(baseString+8);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "70px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+9).click(function(m) {
+	var rgb = $(baseString+9).css('background-color');
+	console.log(baseString+9);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "80px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+10).click(function(m) {
+	var rgb = $(baseString+10).css('background-color');
+	console.log(baseString+10);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "90px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+11).click(function(m) {
+	var rgb = $(baseString+11).css('background-color');
+	console.log(baseString+11);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "100px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+12).click(function(m) {
+	var rgb = $(baseString+12).css('background-color');
+	console.log(baseString+12);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "110px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+13).click(function(m) {
+	var rgb = $(baseString+13).css('background-color');
+	console.log(baseString+13);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "120px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+14).click(function(m) {
+	var rgb = $(baseString+14).css('background-color');
+	console.log(baseString+14);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "130px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+15).click(function(m) {
+	var rgb = $(baseString+15).css('background-color');
+	console.log(baseString+15);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "140px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+16).click(function(m) {
+	var rgb = $(baseString+16).css('background-color');
+	console.log(baseString+16);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "150px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+17).click(function(m) {
+	var rgb = $(baseString+17).css('background-color');
+	console.log(baseString+17);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "160px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+18).click(function(m) {
+	var rgb = $(baseString+18).css('background-color');
+	console.log(baseString+18);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "170px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+19).click(function(m) {
+	var rgb = $(baseString+19).css('background-color');
+	console.log(baseString+19);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "180px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+20).click(function(m) {
+	var rgb = $(baseString+20).css('background-color');
+	console.log(baseString+20);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "190px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+21).click(function(m) {
+	var rgb = $(baseString+21).css('background-color');
+	console.log(baseString+21);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "200px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+22).click(function(m) {
+	var rgb = $(baseString+22).css('background-color');
+	console.log(baseString+22);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "210px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+23).click(function(m) {
+	var rgb = $(baseString+23).css('background-color');
+	console.log(baseString+23);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "220px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
+
+$(baseString+24).click(function(m) {
+	var rgb = $(baseString+24).css('background-color');
+	console.log(baseString+24);
+	console.log(rgb);
+	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
+	document.getElementById('selector').style["left"] = "230px";
+	deadColor = "#";
+	aliveColor= "#";
+	for (var j = 0; j < 3; j++) {
+		var alive = Math.floor(rgb[j]).toString(16);
+		var dead = Math.floor((rgb[j])/2).toString(16);
+		if (alive.length == 1) {
+			alive = "0"+alive;
+		}
+		if (dead.length == 1) {
+			dead = "0"+dead;
+		}
+		aliveColor = aliveColor + alive;
+		deadColor = deadColor + dead;
+	}
+});
