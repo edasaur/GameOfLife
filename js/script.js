@@ -64,8 +64,8 @@ function isSameColor(hex, data) {
 var empty = 0;
 var alive = 1;
 var dead = 0;
-var aliveColor = "#008000";
-var deadColor = "#00FF00";
+var aliveColor = "#FF00FE";
+var deadColor = "#7F007F";
 
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
