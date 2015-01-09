@@ -73,7 +73,7 @@ function fillColor(pixelX, pixelY, dragging) {
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
 	if (isSameColor('FFFFFF', pixel)) {
 		context.fillStyle=aliveColor;
-	}else if (isSameColor('008000',pixel)) {
+	}else if (isSameColor(aliveColor.substring(1, aliveColor.length),pixel)) {
 		context.fillStyle=deadColor;
 	}else {
 		context.fillStyle=aliveColor;
@@ -116,9 +116,6 @@ $('#genCount').mouseover(function(m) {
 $('#genCount').mouseleave(function(m) {
 	counter.style.opacity = 1;
 });
-//Menu options should be here
-
-//Game functionality should be here
 
 
 
