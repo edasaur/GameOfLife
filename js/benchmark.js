@@ -26,6 +26,13 @@ function setDead(x,y) {
 	stateGrid[x][y] = dead;
 	context.fillRect(x*5+1, y*5+1, 4, 4);
 }
+
+function setEmpty(x,y) {
+	context.fillStyle="#ffffff"
+	stateGrid[x][y] = dead;
+	context.fillRect(x*5+1, y*5+1, 4, 4);
+}
+
 function resetCanvas() {
 	for (var i = 0; i < wSquares; i++) {
 		for (var j = 0; j < hSquares; j++) {

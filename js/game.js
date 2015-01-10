@@ -2,6 +2,30 @@
 var counter = document.getElementById("genCount");
 var menu = document.getElementById("menu");
 menu.style.visibility="visible";
+
+$('#next').click(function(m) {
+		runLock = true;
+		if (checkbox1.getAttribute("checked") == "true") {
+			var repeat = 1;
+		} else if (checkbox2.getAttribute("checked") == "true") {
+			var repeat = 3;
+		} else {
+			var repeat = 5;
+		}
+		for (var i = 0; i < repeat; i++) {
+			update();
+		}
+});
+
+$('#reset').click(function(m) {
+	for (var i=0; i<wSquares; i++) {
+		for (var j=0; j<hSquares; j++) {
+			setEmpty(i,j);
+		}
+	}
+	counter.innerHTML = 1;
+});
+
 $(window).keypress(function(e) {
 	if (e.keyCode == 32) {
 		if (checkbox1.getAttribute("checked") == "true") {
