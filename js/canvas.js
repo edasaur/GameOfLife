@@ -22,17 +22,8 @@ context.lineWidth = 1;
 context.strokeStyle = "#696969";
 context.stroke();
 
-// Should add text to grid to indicate that spacebar toggles menu visibility
-$(window).keypress(function(e) {
-	if (e.keyCode == 0 || e.keyCode == 32) {
-		console.log('Menu item should pop up');
-	}
-});
-
-
 //Allowing user to click on individual cells
 var prevPixelX, prevPixelY;
-	//Naive method for now. Change to color-picking method later
 var dragging;
 
 
@@ -64,14 +55,14 @@ function isSameColor(hex, data) {
 var empty = 0;
 var alive = 1;
 var dead = 0;
-var aliveColor = "#FF00FE";
-var deadColor = "#7F007F";
+var aliveColor = "#ff00fe";
+var deadColor = "#7f007f";
 
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
-	if (isSameColor('FFFFFF', pixel)) {
+	if (isSameColor('ffffff', pixel)) {
 		context.fillStyle=aliveColor;
 	}else if (isSameColor(aliveColor.substring(1, aliveColor.length),pixel)) {
 		context.fillStyle=deadColor;

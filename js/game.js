@@ -4,7 +4,6 @@ var menu = document.getElementById("menu");
 menu.style.visibility="visible";
 $(window).keypress(function(e) {
 	if (e.keyCode == 32) {
-		console.log('Game Start!');
 		if (checkbox1.getAttribute("checked") == "true") {
 			var repeat = 1;
 		} else if (checkbox2.getAttribute("checked") == "true") {
