@@ -1,3 +1,30 @@
+#controls {
+	color: white;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 164px;
+	height: 20px;
+	text-align: center;
+	font-family: sans-serif;
+	display: block;
+	position: relative;
+}
+
+#next {
+	border: white solid 1px;
+	width: 80px;
+	height: 20px;
+	float: left;
+}
+
+#reset {
+	border: white solid 1px;
+	width: 80px;
+	height: 20px;
+	float: left;
+}
+
 #map {
 	position: absolute;
 	top: 0;
