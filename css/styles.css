@@ -265,6 +265,12 @@ h1 {
 	color: white;
 }
 
+p {
+	text-align: center;
+	font-family: sans-serif;
+	color: white;
+}
+
 #genCount {
 	background: white;
 	position: absolute;
