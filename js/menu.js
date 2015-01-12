@@ -157,6 +157,7 @@ $(baseString+1).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+2).click(function(m) {
@@ -179,6 +180,7 @@ $(baseString+2).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+3).click(function(m) {
@@ -201,6 +203,7 @@ $(baseString+3).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+4).click(function(m) {
@@ -223,6 +226,7 @@ $(baseString+4).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+5).click(function(m) {
@@ -245,6 +249,7 @@ $(baseString+5).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+6).click(function(m) {
@@ -267,6 +272,7 @@ $(baseString+6).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+7).click(function(m) {
@@ -289,6 +295,7 @@ $(baseString+7).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+8).click(function(m) {
@@ -311,6 +318,7 @@ $(baseString+8).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+9).click(function(m) {
@@ -333,6 +341,7 @@ $(baseString+9).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+10).click(function(m) {
@@ -355,6 +364,7 @@ $(baseString+10).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+11).click(function(m) {
@@ -377,6 +387,7 @@ $(baseString+11).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+12).click(function(m) {
@@ -399,6 +410,7 @@ $(baseString+12).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+13).click(function(m) {
@@ -421,6 +433,7 @@ $(baseString+13).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+14).click(function(m) {
@@ -443,6 +456,7 @@ $(baseString+14).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+15).click(function(m) {
@@ -465,6 +479,7 @@ $(baseString+15).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+16).click(function(m) {
@@ -487,6 +502,7 @@ $(baseString+16).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+17).click(function(m) {
@@ -509,6 +525,7 @@ $(baseString+17).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+18).click(function(m) {
@@ -531,6 +548,7 @@ $(baseString+18).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+19).click(function(m) {
@@ -553,6 +571,7 @@ $(baseString+19).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+20).click(function(m) {
@@ -575,6 +594,7 @@ $(baseString+20).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+21).click(function(m) {
@@ -597,6 +617,7 @@ $(baseString+21).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+22).click(function(m) {
@@ -619,6 +640,7 @@ $(baseString+22).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+23).click(function(m) {
@@ -641,6 +663,7 @@ $(baseString+23).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 $(baseString+24).click(function(m) {
@@ -663,30 +686,33 @@ $(baseString+24).click(function(m) {
 		aliveColor = aliveColor + alive;
 		deadColor = deadColor + dead;
 	}
+	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
 var infLoopStop=false;
 document.head = document.head || document.getElementsByTagName('head')[0];
-
-function changeFavicon() {
+var src="FF00FE"
+function changeFavicon(col) {
 	var link = document.createElement('link'),
 		oldLink = document.getElementById('dynamic-favicon');
 	link.id = 'dynamic-favicon';
 	link.rel = 'icon';
 	prevhref = oldLink.href[oldLink.href.length-5];
 	if (prevhref=="1") {
-		link.href = "images/favicon2.ico";
+		link.href = "images/"+col+"/favicon2.ico";
 	} else if (prevhref=="2") {
-		link.href = "images/favicon3.ico";
+		link.href = "images/"+col+"/favicon3.ico";
 	} else if (prevhref=="3") {
-		link.href = "images/favicon4.ico";
+		link.href = "images/"+col+"/favicon4.ico";
 	} else {
-		link.href = "images/favicon1.ico";
+		link.href = "images/"+col+"/favicon1.ico";
 	}
 	if (oldLink) {
 		document.head.removeChild(oldLink);
 	}
 	document.head.appendChild(link);
-	if(!infLoopStop) window.setTimeout(changeFavicon,1000);
+	if(!infLoopStop) window.setTimeout(function() {
+		changeFavicon(src);
+	},1000);
 }
-changeFavicon();
+changeFavicon(src);
