@@ -46,7 +46,9 @@ $(window).keypress(function(e) {
 			checkbox2.style.visibility="hidden";
 			checkbox3.style.visibility="hidden";
 			menu.style.visibility="hidden";
+			github.style.visibility="hidden";
 		} else {
+			github.style.visibility="visible";
 			menu.style.visibility="visible";
 			if (checkbox1.getAttribute('checked') == "true") {
 				checkbox1.style.visibility="visible";
