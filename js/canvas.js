@@ -100,13 +100,3 @@ $('#map').mouseleave(function(m) {
 	dragging = false;
 });
 
-$('#genCount').mouseover(function(m) {
-	counter.style.opacity = 0.4;
-});
-
-$('#genCount').mouseleave(function(m) {
-	counter.style.opacity = 1;
-});
-
-
-

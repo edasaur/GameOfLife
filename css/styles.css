@@ -11,6 +11,11 @@
 	position: relative;
 }
 
+#genCount:hover {
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+
 #next {
 	border: white solid 1px;
 	width: 80px;
