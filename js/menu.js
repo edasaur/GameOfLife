@@ -664,3 +664,29 @@ $(baseString+24).click(function(m) {
 		deadColor = deadColor + dead;
 	}
 });
+
+var infLoopStop=false;
+document.head = document.head || document.getElementsByTagName('head')[0];
+
+function changeFavicon() {
+	var link = document.createElement('link'),
+		oldLink = document.getElementById('dynamic-favicon');
+	link.id = 'dynamic-favicon';
+	link.rel = 'icon';
+	prevhref = oldLink.href[oldLink.href.length-5];
+	if (prevhref=="1") {
+		link.href = "images/favicon2.ico";
+	} else if (prevhref=="2") {
+		link.href = "images/favicon3.ico";
+	} else if (prevhref=="3") {
+		link.href = "images/favicon4.ico";
+	} else {
+		link.href = "images/favicon1.ico";
+	}
+	if (oldLink) {
+		document.head.removeChild(oldLink);
+	}
+	document.head.appendChild(link);
+	if(!infLoopStop) window.setTimeout(changeFavicon,1000);
+}
+changeFavicon();
