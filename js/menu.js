@@ -693,11 +693,15 @@ var infLoopStop=false;
 document.head = document.head || document.getElementsByTagName('head')[0];
 var src="FF00FE"
 function changeFavicon(col) {
+	console.log("1");
 	var link = document.createElement('link'),
 		oldLink = document.getElementById('dynamic-favicon');
+	console.log("2");
 	link.id = 'dynamic-favicon';
 	link.rel = 'icon';
 	prevhref = oldLink.href[oldLink.href.length-5];
+	console.log("3");
+	console.log("change!");
 	if (prevhref=="1") {
 		link.href = "images/"+col+"/favicon2.ico";
 	} else if (prevhref=="2") {
