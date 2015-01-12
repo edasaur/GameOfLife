@@ -139,8 +139,6 @@ function halfColor(hex) {
 var baseString = "#color"
 $(baseString+1).click(function(m) {
 	var rgb = $(baseString+1).css('background-color');
-	console.log(baseString+1);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "0px";
 	deadColor = "#";
@@ -162,8 +160,6 @@ $(baseString+1).click(function(m) {
 
 $(baseString+2).click(function(m) {
 	var rgb = $(baseString+2).css('background-color');
-	console.log(baseString+2);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "10px";
 	deadColor = "#";
@@ -185,8 +181,6 @@ $(baseString+2).click(function(m) {
 
 $(baseString+3).click(function(m) {
 	var rgb = $(baseString+3).css('background-color');
-	console.log(baseString+3);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "20px";
 	deadColor = "#";
@@ -208,8 +202,6 @@ $(baseString+3).click(function(m) {
 
 $(baseString+4).click(function(m) {
 	var rgb = $(baseString+4).css('background-color');
-	console.log(baseString+4);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "30px";
 	deadColor = "#";
@@ -231,8 +223,6 @@ $(baseString+4).click(function(m) {
 
 $(baseString+5).click(function(m) {
 	var rgb = $(baseString+5).css('background-color');
-	console.log(baseString+5);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "40px";
 	deadColor = "#";
@@ -254,8 +244,6 @@ $(baseString+5).click(function(m) {
 
 $(baseString+6).click(function(m) {
 	var rgb = $(baseString+6).css('background-color');
-	console.log(baseString+6);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "50px";
 	deadColor = "#";
@@ -277,8 +265,6 @@ $(baseString+6).click(function(m) {
 
 $(baseString+7).click(function(m) {
 	var rgb = $(baseString+7).css('background-color');
-	console.log(baseString+7);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "60px";
 	deadColor = "#";
@@ -300,8 +286,6 @@ $(baseString+7).click(function(m) {
 
 $(baseString+8).click(function(m) {
 	var rgb = $(baseString+8).css('background-color');
-	console.log(baseString+8);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "70px";
 	deadColor = "#";
@@ -323,8 +307,6 @@ $(baseString+8).click(function(m) {
 
 $(baseString+9).click(function(m) {
 	var rgb = $(baseString+9).css('background-color');
-	console.log(baseString+9);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "80px";
 	deadColor = "#";
@@ -346,8 +328,6 @@ $(baseString+9).click(function(m) {
 
 $(baseString+10).click(function(m) {
 	var rgb = $(baseString+10).css('background-color');
-	console.log(baseString+10);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "90px";
 	deadColor = "#";
@@ -369,8 +349,6 @@ $(baseString+10).click(function(m) {
 
 $(baseString+11).click(function(m) {
 	var rgb = $(baseString+11).css('background-color');
-	console.log(baseString+11);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "100px";
 	deadColor = "#";
@@ -392,8 +370,6 @@ $(baseString+11).click(function(m) {
 
 $(baseString+12).click(function(m) {
 	var rgb = $(baseString+12).css('background-color');
-	console.log(baseString+12);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "110px";
 	deadColor = "#";
@@ -415,8 +391,6 @@ $(baseString+12).click(function(m) {
 
 $(baseString+13).click(function(m) {
 	var rgb = $(baseString+13).css('background-color');
-	console.log(baseString+13);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "120px";
 	deadColor = "#";
@@ -438,8 +412,6 @@ $(baseString+13).click(function(m) {
 
 $(baseString+14).click(function(m) {
 	var rgb = $(baseString+14).css('background-color');
-	console.log(baseString+14);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "130px";
 	deadColor = "#";
@@ -461,8 +433,6 @@ $(baseString+14).click(function(m) {
 
 $(baseString+15).click(function(m) {
 	var rgb = $(baseString+15).css('background-color');
-	console.log(baseString+15);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "140px";
 	deadColor = "#";
@@ -484,8 +454,6 @@ $(baseString+15).click(function(m) {
 
 $(baseString+16).click(function(m) {
 	var rgb = $(baseString+16).css('background-color');
-	console.log(baseString+16);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "150px";
 	deadColor = "#";
@@ -507,8 +475,6 @@ $(baseString+16).click(function(m) {
 
 $(baseString+17).click(function(m) {
 	var rgb = $(baseString+17).css('background-color');
-	console.log(baseString+17);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "160px";
 	deadColor = "#";
@@ -530,8 +496,6 @@ $(baseString+17).click(function(m) {
 
 $(baseString+18).click(function(m) {
 	var rgb = $(baseString+18).css('background-color');
-	console.log(baseString+18);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "170px";
 	deadColor = "#";
@@ -553,8 +517,6 @@ $(baseString+18).click(function(m) {
 
 $(baseString+19).click(function(m) {
 	var rgb = $(baseString+19).css('background-color');
-	console.log(baseString+19);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "180px";
 	deadColor = "#";
@@ -576,8 +538,6 @@ $(baseString+19).click(function(m) {
 
 $(baseString+20).click(function(m) {
 	var rgb = $(baseString+20).css('background-color');
-	console.log(baseString+20);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "190px";
 	deadColor = "#";
@@ -599,8 +559,6 @@ $(baseString+20).click(function(m) {
 
 $(baseString+21).click(function(m) {
 	var rgb = $(baseString+21).css('background-color');
-	console.log(baseString+21);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "200px";
 	deadColor = "#";
@@ -622,8 +580,6 @@ $(baseString+21).click(function(m) {
 
 $(baseString+22).click(function(m) {
 	var rgb = $(baseString+22).css('background-color');
-	console.log(baseString+22);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "210px";
 	deadColor = "#";
@@ -645,8 +601,6 @@ $(baseString+22).click(function(m) {
 
 $(baseString+23).click(function(m) {
 	var rgb = $(baseString+23).css('background-color');
-	console.log(baseString+23);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "220px";
 	deadColor = "#";
@@ -668,8 +622,6 @@ $(baseString+23).click(function(m) {
 
 $(baseString+24).click(function(m) {
 	var rgb = $(baseString+24).css('background-color');
-	console.log(baseString+24);
-	console.log(rgb);
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	document.getElementById('selector').style["left"] = "230px";
 	deadColor = "#";
@@ -693,15 +645,11 @@ var infLoopStop=false;
 document.head = document.head || document.getElementsByTagName('head')[0];
 var src="FF00FE"
 var change = function changeFavicon() {
-	console.log("1");
 	var link = document.createElement('link'),
 		oldLink = document.getElementById('dynamic-favicon');
-	console.log("2");
 	link.id = 'dynamic-favicon';
 	link.rel = 'icon';
 	prevhref = oldLink.href[oldLink.href.length-5];
-	console.log("3");
-	console.log("change!");
 	if (prevhref=="1") {
 		link.href = "images/"+src+"/favicon2.ico";
 	} else if (prevhref=="2") {
