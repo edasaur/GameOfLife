@@ -698,6 +698,7 @@ function changeFavicon(col) {
 	link.id = 'dynamic-favicon';
 	link.rel = 'icon';
 	prevhref = oldLink.href[oldLink.href.length-5];
+	console.log("change!");
 	if (prevhref=="1") {
 		link.href = "images/"+col+"/favicon2.ico";
 	} else if (prevhref=="2") {
