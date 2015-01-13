@@ -58,10 +58,7 @@ var dead = 0;
 var aliveColor = "#ff00fe";
 var deadColor = "#7f007f";
 
-console.log('does this even work anymore?');
-
 function fillColor(pixelX, pixelY, dragging) {
-	console.log('fill!~');
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
 	var pixel = context.getImageData(fillPixelX, fillPixelY, 1, 1).data;
@@ -85,9 +82,8 @@ function fillColor(pixelX, pixelY, dragging) {
 }
 
 $('#map').mousedown(function(m){
-	console.log("mouse down");
 	if (m.which == 3) {
-		console.log("right click?");
+		console.log("right-click");		
 	} else {
 		dragging = true;
 		fillColor(m.pageX, m.pageY, false);
@@ -95,19 +91,16 @@ $('#map').mousedown(function(m){
 });
 
 $('#map').mousemove(function(m){
-	console.log("mouse move");
 	if (dragging) {
 		fillColor(m.pageX, m.pageY, true);
 	}
 });
 
 $('#map').mouseup(function(m) {
-	console.log("mouse up");
 	dragging = false;
 });
 
 $('#map').mouseleave(function(m) {
-	console.log("Mouse leave");
 	dragging = false;
 });
 
