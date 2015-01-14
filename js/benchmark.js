@@ -1,3 +1,4 @@
+//Call this function to perform benchmarking
 function run() {
 	var total = 0;
 	for (var i = 0; i < 100; i++) {
@@ -15,32 +16,37 @@ function run() {
 	console.log("Time it took for 1000 loops is: "+total+"s");
 }
 
+//sets specified box to aliveColor
 function setAlive(x,y) {
 	context.fillStyle=aliveColor;
 	stateGrid[x][y] = alive;
 	context.fillRect(x*5+1, y*5+1, 4, 4);
 }
 
+//sets specified box to deadColor
 function setDead(x,y) {
 	context.fillStyle=deadColor;
 	stateGrid[x][y] = dead;
 	context.fillRect(x*5+1, y*5+1, 4, 4);
 }
 
+//resets specified box to blanks state
 function setEmpty(x,y) {
 	context.fillStyle="#ffffff"
 	stateGrid[x][y] = dead;
 	context.fillRect(x*5+1, y*5+1, 4, 4);
 }
 
+//resets entire canvas
 function resetCanvas() {
 	for (var i = 0; i < wSquares; i++) {
 		for (var j = 0; j < hSquares; j++) {
-			setDead(i, j);
+			setEmpty(i, j);
 		}
 	}
 }
 
+//Fills screen with gliders
 function onStart() {
 	for (var i = 0; i < wSquares-3; i+=4) {
 		for (var j = 0; j < hSquares-3; j+=4) {
