@@ -3,6 +3,9 @@ var counter = document.getElementById("genCount");
 var menu = document.getElementById("menu");
 menu.style.visibility="visible";
 
+var updated;
+
+//Next button advances generation
 $('#next').click(function(m) {
 		runLock = true;
 		if (checkbox1.getAttribute("checked") == "true") {
@@ -17,17 +20,15 @@ $('#next').click(function(m) {
 		}
 });
 
+//Reset button resets the canvas
 $('#reset').click(function(m) {
-	for (var i=0; i<wSquares; i++) {
-		for (var j=0; j<hSquares; j++) {
-			setEmpty(i,j);
-		}
-	}
+	resetCanvas();
 	counter.innerHTML = 1;
 });
 
+//key menu
 $(window).keypress(function(e) {
-	if (e.keyCode == 32) {
+	if (e.keyCode == 32) { //'Space bar' pressed
 		if (checkbox1.getAttribute("checked") == "true") {
 			var repeat = 1;
 		} else if (checkbox2.getAttribute("checked") == "true") {
@@ -40,7 +41,7 @@ $(window).keypress(function(e) {
 		}
 	}
 
-	if (e.keyCode == 13) {
+	if (e.keyCode == 13) { //'Enter' pressed
 		if (menu.style.visibility == "visible") {
 			checkbox1.style.visibility="hidden";
 			checkbox2.style.visibility="hidden";
@@ -93,7 +94,7 @@ function bottomRight(x, y) {
 	return stateGrid[(x+1)%wSquares][(y+1)%hSquares];
 }
 
-//naive solution. Will update later
+//returns number of alive neighbors of square x, y
 function countNeighbors(x, y) {
 	var upper = upperLeft(x, y) + upperMiddle(x, y) + upperRight(x, y);
 	var middle = middleLeft(x, y) + middleRight(x, y);
@@ -101,7 +102,7 @@ function countNeighbors(x, y) {
 	return upper+middle+bottom;
 }
 
-var updated;
+//One generation advance
 function update() {
 	updated = new Array();
 	for (var i = 0; i < template.length; i++) {
