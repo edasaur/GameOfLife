@@ -3,45 +3,56 @@ var canvas = document.getElementById("map");
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 
-canvas.width = w;
-canvas.height = h;
-
 var context = canvas.getContext("2d");
-context.fillStyle="#FFFFFF";
-context.fillRect(0,0,w,h);
-for (var x = 0.5; x < canvas.width; x += 5) {
-	context.moveTo(x,0);
-	context.lineTo(x,canvas.height);
-}
-
-for (var y = 0.5; y < canvas.height; y+=5) {
-	context.moveTo(0,y);
-	context.lineTo(canvas.width, y)
-}
-context.lineWidth = 1;
-context.strokeStyle = "#696969";
-context.stroke();
-
 //Allowing user to click on individual cells
 var prevPixelX, prevPixelY;
 var dragging;
 
 
 var template = new Array();
-var wSquares = ((w - ((w-1)%5)-1)/5)+1; //calculates number of squares in x
-var hSquares = ((h - ((h-1)%5)-1)/5)+1; //calculates number of squares in y
-for (var wcount=0; wcount < wSquares; wcount++) {
-	var temp = new Array();
-	for (var hcount=0; hcount < hSquares; hcount++) {
-		temp.push(0);
-	}
-	template.push(temp);
-}
-
 var stateGrid = new Array();
 
-for (var i = 0; i < template.length; i++) {
-	stateGrid[i] = template[i].slice();
+var wSquares = ((w - ((w-1)%5)-1)/5)+1; //calculates number of squares in x
+var hSquares = ((h - ((h-1)%5)-1)/5)+1; //calculates number of squares in y
+
+var empty = 0;
+var alive = 1;
+var dead = 0;
+var aliveColor = "#ff00fe";
+var deadColor = "#7f007f";
+
+
+function gridSetup() {
+	canvas.width = w;
+	canvas.height = h;
+	context.fillStyle="#FFFFFF";
+	context.fillRect(0,0,w,h);
+	for (var x = 0.5; x < canvas.width; x += 5) {
+		context.moveTo(x,0);
+		context.lineTo(x,canvas.height);
+	}
+	
+	for (var y = 0.5; y < canvas.height; y+=5) {
+		context.moveTo(0,y);
+		context.lineTo(canvas.width, y)
+	}	
+	context.lineWidth = 1;
+	context.strokeStyle = "#696969";
+	context.stroke();
+}
+gridSetup();
+function arraySetup() {
+	for (var wcount=0; wcount < wSquares; wcount++) {
+		var temp = new Array();
+		for (var hcount=0; hcount < hSquares; hcount++) {
+			temp.push(0);
+		}
+		template.push(temp);
+	}
+	
+	for (var i = 0; i < template.length; i++) {
+		stateGrid[i] = template[i].slice();
+	}
 }
 
 function isSameColor(hex, data) {
@@ -52,12 +63,7 @@ function isSameColor(hex, data) {
 	}
 	return true;
 }
-var empty = 0;
-var alive = 1;
-var dead = 0;
-var aliveColor = "#ff00fe";
-var deadColor = "#7f007f";
-
+arraySetup();
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
