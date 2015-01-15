@@ -40,7 +40,7 @@ function gridSetup() {
 	context.strokeStyle = "#696969";
 	context.stroke();
 }
-gridSetup();
+
 function arraySetup() {
 	for (var wcount=0; wcount < wSquares; wcount++) {
 		var temp = new Array();
@@ -63,7 +63,7 @@ function isSameColor(hex, data) {
 	}
 	return true;
 }
-arraySetup();
+
 function fillColor(pixelX, pixelY, dragging) {
 	fillPixelX = pixelX - ((pixelX-1)%5);
 	fillPixelY = pixelY - ((pixelY-1)%5);
@@ -109,4 +109,5 @@ $('#map').mouseup(function(m) {
 $('#map').mouseleave(function(m) {
 	dragging = false;
 });
-
+gridSetup();
+arraySetup();
