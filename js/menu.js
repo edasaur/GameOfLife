@@ -1,3 +1,4 @@
+//Element retrievals for later use.
 var checkbox1 = document.getElementById('checked1');
 var checkbox2 = document.getElementById('checked2');
 var checkbox3 = document.getElementById('checked3');
@@ -25,13 +26,16 @@ var color21 = document.getElementById('color21');
 var color22 = document.getElementById('color22');
 var color23 = document.getElementById('color23');
 var color24 = document.getElementById('color24');
-
-//temp hacky method
-checkbox1.setAttribute('checked', 'true');
-checkbox2.setAttribute('checked', 'false');
-checkbox3.setAttribute('checked', 'false');
-
+var baseString = "#color"
 var down = [false];
+//hacky method
+function checkboxSetup() {
+	checkbox1.setAttribute('checked', 'true');
+	checkbox2.setAttribute('checked', 'false');
+	checkbox3.setAttribute('checked', 'false');
+}
+
+//Allows setting of speed of generation advances
 $('#checkbox1').mousedown(function(m) {
 	checkbox1.setAttribute("style","width:20px; height:20px;");
 	checkbox1.style.visibility="visible";
@@ -132,11 +136,7 @@ $('#checkbox3').mouseenter(function(m) {
 });
 
 
-function halfColor(hex) {
-	
-}
-
-var baseString = "#color"
+//Color Picker event listeners
 $(baseString+1).click(function(m) {
 	var rgb = $(baseString+1).css('background-color');
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
@@ -641,28 +641,4 @@ $(baseString+24).click(function(m) {
 	src = aliveColor.substring(1,aliveColor.length).toUpperCase();
 });
 
-var infLoopStop=false;
-document.head = document.head || document.getElementsByTagName('head')[0];
-var src="FF00FE"
-var change = function changeFavicon() {
-	var link = document.createElement('link'),
-		oldLink = document.getElementById('dynamic-favicon');
-	link.id = 'dynamic-favicon';
-	link.rel = 'icon';
-	prevhref = oldLink.href[oldLink.href.length-5];
-	if (prevhref=="1") {
-		link.href = "images/"+src+"/favicon2.ico";
-	} else if (prevhref=="2") {
-		link.href = "images/"+src+"/favicon3.ico";
-	} else if (prevhref=="3") {
-		link.href = "images/"+src+"/favicon4.ico";
-	} else {
-		link.href = "images/"+src+"/favicon1.ico";
-	}
-	if (oldLink) {
-		document.head.removeChild(oldLink);
-	}
-	document.head.appendChild(link);
-	if(!infLoopStop) window.setTimeout(change,1000);
-}
-change();
+checkboxSetup();
